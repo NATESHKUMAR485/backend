@@ -3,10 +3,14 @@ const express = require('express');
 const connectDB = require('./config/db');
 const morgan = require('morgan');
 const errorHandler = require('./middleware/errorHandler');
+const cors = require('cors');
 
 // Other middleware and routes here
 
-
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    optionsSuccessStatus: 200
+  }));
 
 const app = express();
 connectDB();
