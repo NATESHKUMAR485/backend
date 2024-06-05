@@ -12,12 +12,6 @@ const cors = require('cors');
 //     optionsSuccessStatus: 200
 //   }));
 
-  const corsOptions = {
-    origin: 'https://bone-bank.vercel.app', // Allow requests from your frontend
-    optionsSuccessStatus: 200,
-  };
-
-app.use(cors(corsOptions))
 const app = express();
 connectDB();
 
